@@ -1,0 +1,50 @@
+<jsp:root
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:jsp="http://java.sun.com/JSP/Page"
+        xmlns:c="http://java.sun.com/jsp/jstl/core"
+        xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+        xmlns:k="urn:jsptagdir:/WEB-INF/tags/komponenter"
+        xmlns:s="urn:jsptagdir:/WEB-INF/tags/sikkerhet"
+        version="2.0">
+  <jsp:directive.tag pageEncoding="utf-8"
+                     description="Header"/>
+
+  <div>
+    <div id="headerLogo">
+      <c:url value="/" var="headerURL"/>
+      <a href="${headerURL}"><img src="${bilderoot}/logo.gif" alt="Logo"/></a>
+    </div>
+
+    <s:innlogget>
+      <div id="loggUt">
+          <c:url value="${sideroot}/loggut" var="loggUtURL"/>
+          <form action="${loggUtURL}">
+            <div>
+              Innlogget bruker: <span class="brukernavn"><s:bruker/></span>&#160;
+              <input type="submit" value="Logg ut" />
+            </div>
+          </form>
+      </div>
+    </s:innlogget>
+
+  </div>
+
+  <div id="headerMeny">
+    <c:url value="${sideroot}/aapen/" var="apenURL"/>
+    <a id="aapenMeny" href="${apenURL}">&#197;pen</a>
+    <c:url value="${sideroot}/innlogget/" var="innloggetURL"/>
+    <a id="aapenMeny" href="${innloggetURL}">Innlogget</a>
+
+    <c:url value="${sideroot}/sikker/" var="sikkerURL"/>
+    <a id="sikkerMeny" href="${sikkerURL}">Sikker</a>
+
+    <c:url value="${sideroot}/ekstra/arbeider" var="ekstraURL"/>
+    <a id="ekstraMeny" href="${ekstraURL}">Sikret ARBEIDER</a>
+    <c:url value="${sideroot}/ekstra/admin" var="ekstraURL"/>
+    <a id="sentralAdminMeny" href="${ekstraURL}">Sikret ADMIN</a>
+    
+    <c:url value="${sideroot}/loggut" var="loggutURL"/>
+    <a id="sentralAdminMeny" href="${loggutURL}">URL-loggut</a>
+
+  </div>
+</jsp:root>

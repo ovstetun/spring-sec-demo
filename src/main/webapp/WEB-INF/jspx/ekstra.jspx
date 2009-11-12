@@ -1,0 +1,24 @@
+<jsp:root
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:jsp="http://java.sun.com/JSP/Page"
+        xmlns:c="http://java.sun.com/jsp/jstl/core"
+        xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+        xmlns:sec="http://www.springframework.org/security/tags"
+        xmlns:l="urn:jsptagdir:/WEB-INF/tags/layout"
+        xmlns:s="urn:jsptagdir:/WEB-INF/tags/sikkerhet"
+        version="2.1">
+
+  <jsp:directive.page contentType="text/html;charset=utf-8"/>
+
+  <l:standard>
+    <div class="boks">
+      <div>
+        <h3>Dette er en ekstra sikret side</h3>
+        <p>
+          <c:out value="${melding}" />
+        </p>
+      </div>
+    </div>
+  </l:standard>
+
+</jsp:root>

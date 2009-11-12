@@ -2,11 +2,13 @@
         xmlns="http://www.w3.org/1999/xhtml"
         xmlns:jsp="http://java.sun.com/JSP/Page"
         xmlns:c="http://java.sun.com/jsp/jstl/core"
-        xmlns:k="urn:jsptagdir:/WEB-INF/tags/komponenter"
+        xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+        xmlns:l="urn:jsptagdir:/WEB-INF/tags/layout"
         version="2.1">
 
   <jsp:directive.page contentType="text/html;charset=utf-8"/>
-
-  <c:redirect url="/side/"/>
+  <l:standard>
+    <h1>Ikke tilgang til forespurt ressurs!</h1>
+  </l:standard>
 
 </jsp:root>

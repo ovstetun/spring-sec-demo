@@ -1,0 +1,47 @@
+<jsp:root
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:jsp="http://java.sun.com/JSP/Page"
+        xmlns:c="http://java.sun.com/jsp/jstl/core"
+        xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+        xmlns:l="urn:jsptagdir:/WEB-INF/tags/layout"
+        version="2.1">
+
+  <jsp:directive.page contentType="text/html;charset=utf-8"/>
+
+  <l:standard>
+    <div class="boks">
+      <h4>Innlogging</h4>
+      <div>
+        <c:if test="${param.ugyldig ne null}">
+          <p class="feilmelding">Ugyldig brukeravn eller passord.</p>
+        </c:if>
+
+        <c:url value="/j_spring_security_check" var="loggInnURL"/>
+        <form action="${loggInnURL}" method="post" id="loggInnForm">
+          <table id="logginn">
+            <tr>
+              <td>Brukernavn:</td>
+              <td><input type="text" name="j_username" id="brukernavnTekst"/></td>
+            </tr>
+            <tr>
+              <td>Passord:</td>
+              <td><input type="password" name="j_password"/></td>
+            </tr>
+            <tr>
+              <td class="hoyreTekst" colspan="2">
+                <input type="submit" value="Logg inn"/>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      leggTilOnLoadFunksjon(function() {
+        giFokusTilFelt('brukernavnTekst');
+      });
+    </script>
+  </l:standard>
+
+</jsp:root>

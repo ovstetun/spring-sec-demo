@@ -14,13 +14,14 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <spring.version>3.0.0.M4</spring.version>
+    <springsec.version>3.0.0.RC1</springsec.version>
   </properties>
   
   <repositories>
     <repository>
       <id>spring-maven-milestone</id>
       <name>Springframework Maven Repository</name>
-      <url>http://s3.amazonaws.com/maven.springframework.org/milestone</url>
+      <url>http://maven.springframework.org/milestone</url>
     </repository>
   </repositories>
 
@@ -98,35 +99,32 @@
     <dependency>
       <groupId>org.springframework.security</groupId>
       <artifactId>spring-security-core</artifactId>
-      <version>2.0.4</version>
+      <version>${springsec.version}</version>
+      <!--
       <exclusions>
         <exclusion>
           <groupId>org.springframework</groupId>
           <artifactId>spring-support</artifactId>
         </exclusion>
       </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.security</groupId>
-      <artifactId>spring-security-core-tiger</artifactId>
-      <version>2.0.4</version>
+      -->
     </dependency>
     <dependency>
       <groupId>org.springframework.security</groupId>
       <artifactId>spring-security-acl</artifactId>
-      <version>2.0.4</version>
+      <version>${springsec.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework.security</groupId>
       <artifactId>spring-security-taglibs</artifactId>
-      <version>2.0.4</version>
+      <version>${springsec.version}</version>
     </dependency>
-    <!-- Spring Security Avhengigheter -->
     <dependency>
-      <groupId>org.aspectj</groupId>
-      <artifactId>aspectjrt</artifactId>
-      <version>1.6.4</version>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-config</artifactId>
+      <version>${springsec.version}</version>
     </dependency>
+    
     
     <!-- Avhengigheter for logging -->
     <dependency>
@@ -174,10 +172,10 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-eclipse-plugin</artifactId>
         <configuration>
+          <downloadSources>true</downloadSources>
           <additionalProjectnatures>
             <projectnature>com.genuitec.eclipse.j2eedt.core.webnature</projectnature>
             <projectnature>org.eclipse.wst.jsdt.core.jsNature</projectnature>
-            <projectnature>com.atlassw.tools.eclipse.checkstyle.CheckstyleNature</projectnature>
           </additionalProjectnatures>
           <additionalBuildcommands>
             <buildcommand>org.eclipse.wst.jsdt.core.javascriptValidator</buildcommand>
@@ -185,7 +183,6 @@
             <buildcommand>com.genuitec.eclipse.j2eedt.core.J2EEProjectValidator</buildcommand>
             <buildcommand>com.genuitec.eclipse.j2eedt.core.DeploymentDescriptorValidator</buildcommand>
             <buildcommand>org.eclipse.wst.validation.validationbuilder</buildcommand>
-            <buildcommand>com.atlassw.tools.eclipse.checkstyle.CheckstyleBuilder</buildcommand>
           </additionalBuildcommands>
         </configuration>
       </plugin>
@@ -200,6 +197,11 @@
           <compilerVersion>1.6</compilerVersion>
           <downloadSources>true</downloadSources>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>2.1-beta-1</version>
       </plugin>
     </plugins>
   </build>

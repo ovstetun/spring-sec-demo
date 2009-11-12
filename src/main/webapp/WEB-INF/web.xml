@@ -1,7 +1,58 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5">
 
-<web-app>
-  <display-name>Archetype Created Web Application</display-name>
+  <display-name>security demo</display-name>
+  <description>security demo</description>
+
+
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+
+  <servlet>
+    <servlet-name>SpringServlet</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>classpath:servlet-context.xml</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SpringServlet</servlet-name>
+    <url-pattern>/side/*</url-pattern>
+  </servlet-mapping>
+
+  <welcome-file-list>
+    <welcome-file>index.jspx</welcome-file>
+  </welcome-file-list>
+
+  <!-- 403 - ingen tilgang. bruker er medlem av feil gruppe -->
+  <error-page>
+    <error-code>403</error-code>
+    <location>/WEB-INF/jspx/feil/403.jspx</location>
+  </error-page>
+
+  <filter>  
+    <filter-name>springSecurityFilterChain</filter-name>  
+    <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+  </filter>
+  <filter-mapping>  
+    <filter-name>springSecurityFilterChain</filter-name>
+    <url-pattern>/*</url-pattern>  
+  </filter-mapping>
+
+
+  <!-- Henviser til oppsett av spring application context -->
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>
+      classpath:applicationContext.xml
+      classpath:securityContext.xml
+    </param-value>
+  </context-param>
+  
 </web-app>

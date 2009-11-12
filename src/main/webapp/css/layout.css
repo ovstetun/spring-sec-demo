@@ -1,0 +1,487 @@
+/**
+ * Layout for eVurdering.
+ * Skal validere uten feil. Bruk http://jigsaw.w3.org/css-validator/
+ */
+#sortable {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 350px;
+}
+
+#sortable li {
+  margin: 0 3px 3px 3px;
+  padding: 0.4em;
+  padding-left: 1.5em;
+  font-size: 1.4em;
+  height: 18px;
+  border: 1px solid #aaa;
+  background-color: #eee;
+}
+
+#sortable li span {
+  position: absolute;
+  margin-left: -1.3em;
+}
+
+#hoppendeInfo {
+  margin: 3px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  background-color: #45ca4b;
+  display: none;
+  width: 326px;
+}
+
+#side {
+  width: 1200px;
+  margin: 0 auto;
+  background: #E9E4D6;
+  position: relative;
+  height: auto !important; /* real browsers */
+  height: 100%; /* IE6: treaded as min-height*/
+  min-height: 100%; /* real browsers */
+}
+
+#loggUt {
+  padding-top: 12px;
+  text-align: right;
+}
+
+#loggUt p {
+  padding: 5px;
+  margin: 0;
+}
+
+#loggUt form {
+  display: inline;
+}
+
+#headerLogo {
+  /*background-color: #0599A9;*/
+  margin-bottom: 1px;
+  padding: 5px 15px;
+  
+  float: left;
+}
+
+#headerMeny {
+  margin-bottom: 1px;
+  background-color: #33BFD5;
+  
+  clear: both;
+}
+
+#headerMeny a {
+  color: white;
+  padding: 12px;
+  border-right: 1px solid #E9E4D6;
+  display: inline-block;
+}
+
+#headerMeny a.valgt {
+  background-color: #0599A9;
+}
+
+#veksleHjelp {
+  float: right;
+  display: inline;
+}
+
+#brodsmule {
+  padding-left: 5px;
+}
+
+#body {
+  height: 100%;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+#logginn td {
+  padding: 2px;
+}
+
+.boks {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.boks h4 {
+  color: #373426;
+  background-color: #E2DDC4;
+  margin: 0;
+  padding: 4px 4px 4px 8px;
+  font-size: 1.09em;
+}
+
+.boks div {
+  padding: 10px;
+}
+
+#kontekstTittel {
+  border-bottom: 1px solid #B9AB7A;
+  padding-left: 2px;
+  margin-bottom: 12px;
+}
+
+#kontekstTittel h1 {
+  font-size: 220%;
+  padding-left: 3px;
+  margin: 0px;
+  border: none;
+}
+
+#kontekstMeny {
+  width: 185px;
+  margin-right: 10px;
+}
+
+#kontekstMeny li {
+  margin: 0px 0px;
+  padding: 2px;
+  font-weight: bold;
+  border-bottom: 1px solid #B9AB7A;
+}
+
+#kontekstMeny li a {
+  color: #373426;
+  padding: 3px;
+  display: block;
+}
+
+#kontekstMeny li a.valgt {
+  color: white;
+  background-color: #373426;
+}
+
+#kontekstMeny li a:hover {
+  color: black;
+  background-color: white;
+}
+
+#kontekstMeny li ul li {
+  padding: 0px;
+  margin: 0px 0px 0px 20px;
+  font-weight: normal;
+  border: none;
+}
+
+#kontekstMeny li ul li a {
+  padding: 2px;
+}
+
+#kontekstMeny select,
+#kontekstMeny input {
+    width: 100%;
+}
+
+#menySide {
+  display: inline-block;
+  vertical-align: top;
+  width: 778px;
+  padding: 16px 16px;
+  background-color: white;
+}
+
+#menySide.utenHjelp {
+  width: 972px;
+}
+
+#hjelpeBoks {
+  margin-left: 10px;
+  width: 184px;
+  background-color: white;
+  display: none;
+}
+
+#hjelpeBoks.synlig {
+  display: inline-block;
+}
+
+#utenMenySide {
+  display: inline-block;
+  vertical-align: top;
+  width: 996px;
+  padding: 0px 5px;
+  background-color: white;
+}
+
+#utenMenySide.utenHjelp {
+  width: 1190px;
+}
+
+#hjelpeBoks p {
+  padding: 3px 6px;
+}
+
+#soknadListe {
+  table-layout: fixed;
+}
+
+.forkortelse {
+  height: 15px;
+  display: block;
+  overflow: hidden;
+  padding-right: 5px;
+  background: url(../bilder/forkortelse.png) right top no-repeat;
+}
+
+.forkortelse abbr{
+  word-wrap: break-word;
+}
+
+.enkeltSkjema input[type=text] {
+  width: 250px;
+}
+
+.enkeltSkjema select {
+  width: 273px;
+}
+
+.enkeltSkjema textarea {
+  width: 99%;
+  height: 128px;
+}
+
+/*
+.vertikalFaneSide .enkeltSkjema textarea {
+  width: 580px;
+}
+*/
+.vertikalFaneSide {
+  border: 1px solid #BAAE78;
+  display: table;
+}
+
+.vertikalFaneSide .innhold {
+  display: table-cell;
+  width: 100%;
+  vertical-align: top;
+  padding: 10px;
+}
+
+.vertikalFaneSide .faner {
+  display: table-cell;
+  min-width: 150px;
+  vertical-align: top;
+  background-color: #E2DDC4;
+}
+
+.vertikalFaneSide .faner ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.vertikalFaneSide .faner li a {
+  display: block;
+  padding: 6px 10px;
+  text-decoration: none;
+  background-color: #E2DDC4;
+  border-bottom: 1px solid white;
+  color: black;
+}
+
+.vertikalFaneSide .faner li a.valgt {
+  font-weight: bold;
+  color: white; 
+  background-color: #373426;
+}
+
+.vertikalFaneSide .faner li a:hover {
+  color: black;
+  background-color: white;
+}
+
+td.piler {
+  vertical-align: middle;
+}
+
+select.kriterier {
+  width: 270px;
+  height: 250px;
+}
+
+select.sprakValg {
+  width: 160px;
+  height: 120px;
+}
+
+div.feltVerdi {
+  margin-bottom: 10px;
+}
+
+div.feltKnapp {
+  margin-bottom: 10px;
+}
+
+table.radioknapper th,table.radioknapper td {
+  padding-right: 10px;
+  text-align: center;
+}
+
+table.fixed {
+  table-layout: fixed;
+}
+
+/*  Brukes ikke lenger, ønsker å kunne overstyre */
+table.standardtabell {
+  text-align: left;
+  font-family: arial, serif;
+  font-size: 8pt;
+  border-bottom: 1px solid #B9AB7A;
+}
+
+table.standardtabell thead tr th,table.standardtabell tfoot tr th {
+  border-bottom: 1px solid #B9AB7A;
+  border-right: 3px solid white;
+  font-size: 8pt;
+  padding: 4px;
+}
+
+table.standardtabell thead tr .header {
+  background: url(../bilder/jquery/bg.gif) no-repeat center right;
+  cursor: pointer;
+}
+
+table.standardtabell tbody td {
+  color: #3D3D3D;
+  padding: 4px;
+  background-color: #FFF;
+  vertical-align: top;
+  border-right: 3px solid white;
+}
+
+table.standardtabell tbody td.input {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+table.standardtabell tbody a {
+  display: block;
+  text-decoration: none;
+}
+
+table.standardtabell tbody tr.odd td {
+  background-color: #E9E4D6;
+}
+
+table.standardtabell thead tr .headerSortUp {
+  background-image: url(../bilder/jquery/asc.gif);
+}
+
+table.standardtabell thead tr .headerSortDown {
+  background-image: url(../bilder/jquery/desc.gif);
+}
+
+table.standardtabell thead tr .headerSortDown,table.standardtabell thead tr .headerSortUp {
+  background-color: #E2DDC4;
+}
+
+table.standardtabell input[type=text] {
+  margin-left: -3px;
+  width: 100%;
+}
+
+table.standardtabell textarea {
+  width: 100%;
+  margin-left: -3px;
+  height: 50px;
+}
+
+table.standardtabell td.radSum,table.standardtabell td.kolonneSum,table.standardtabell td.totalSum {
+  background-color: #eee;
+}
+
+table.standardtabell th.utenKant,td.utenKant {
+  border: none;
+}
+
+table.utenkant {
+  border-bottom: none;
+}
+
+table.standardtabell tr.skjult {
+  display: none;
+}
+
+table.punkttabell {
+  width: 100%;
+}
+
+table.punkttabell td {
+  padding: 5px;
+  border: 1px solid #ddd;
+}
+
+table.punkttabell th {
+  padding: 5px;
+}
+
+table.punkttabell tbody a {
+  display: block;
+  text-decoration: none;
+}
+
+textarea.bred {
+/*  width: 99%;*/
+  height: 80px;
+}
+
+textarea.kommentar {
+  width: 99%;
+  height: 100px;
+}
+
+#justertPlan td,#justertPlan th {
+  vertical-align: middle;
+}
+
+table.punkttabell th.utenKant,table.punkttabell td.utenKant {
+  border: none;
+}
+
+table.punkttabell th.tabellSkille,table.punkttabell td.tabellSkille {
+  border-top: 0px;
+  border-bottom: 0px;
+  background-color: white;
+}
+
+.lagre {
+  text-align: right;
+  padding-top: 10px;
+  border-top: 1px solid #B9AB7A;
+}
+
+.linjeskille {
+  padding-top: 10px;
+  border-top: 1px solid #B9AB7A;
+}
+
+.tomrad {
+  height: 10px;
+}
+
+.oversattFelt {
+  background-color: #f1f6f7;
+}
+
+/*
+* jquery.textarearesizer
+*/
+div.grippie {
+  background: #EEEEEE url(grippie.png) no-repeat scroll center 2px;
+  border-color: #DDDDDD;
+  border-style: solid;
+  border-width: 0pt 0px 0px;
+  cursor: s-resize;
+  width: 100%;
+  height: 9px;
+  overflow: hidden;
+}
+
+.resizable-textarea textarea {
+  margin-bottom: 0pt;
+  height: 150px;
+}

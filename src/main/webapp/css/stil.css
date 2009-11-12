@@ -1,0 +1,301 @@
+/**
+ * Generell stil og gjenbrukbare definisjoner for eVurdering.
+ * Skal validere uten feil. Bruk http://jigsaw.w3.org/css-validator/
+ */
+
+/**********/
+/* stil   */
+/**********/
+
+html, body, form, table, div, img {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  color: #373426;
+  background: url(../bilder/background_1240.gif) #F5F3ED center top repeat-y;
+  font-size: 68.75%;
+  font-family: Verdana, Arial, helvetica, sans-serif;
+  height: 100%;
+}
+html {
+	overflow-y: scroll;
+}
+
+body {
+  height: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th, td {
+  padding: 2px;
+  vertical-align: top;
+  text-align: left;
+}
+
+img {
+  border: 0;
+  vertical-align: top;
+}
+
+.datePicker img, input[type=checkbox]{
+  border: 0;
+  vertical-align: middle;
+  margin-left:5px;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0.5em 0 0.5em 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0px 0px 12px 0px;
+  font-size: 330%;
+  font-weight: normal;
+  font-family: Times New Roman;
+  border-bottom: 1px solid #B9AB7A; 
+}
+
+h2 {
+  margin: 0px 0px 12px 0px;
+  padding-left: 14px;
+  color: #373426;
+  font-weight: bold;
+  font-family: Times New Roman;
+  background-color: #E2DDC4;
+}
+
+p {
+  margin: 0.5em 0 0.5em 0;
+  padding: 0;
+}
+
+a {
+  color: #0072B2;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.brukernavn {
+  color: #0072B2;
+}
+
+abbr {
+  border: none;
+}
+
+ul {
+  padding-left: 0px;
+  list-style: none;
+  margin: 0px;
+}
+
+input, select {
+  font-size: 100%;
+  font-family: Verdana, Arial, helvetica, sans-serif;
+}
+
+/***********/
+/* klasser */
+/***********/
+
+.hoyreTekst {
+  text-align: right;
+}
+
+.midtstiltTekst {
+  text-align: center;
+}
+
+table tbody tr td.midtstiltTekstVertikalt {
+  vertical-align: middle;
+}
+
+.fullbredde {
+  width: 100%;
+}
+
+.feilmelding {
+  color: #A52A2A;
+}
+
+.feilfelt {
+  background-color: #ffd2d2;
+}
+
+div.tabell {
+  display: table;
+}
+
+div.celle {
+  display: table-cell;
+  padding: 2px;
+}
+
+div.rad {
+  display: table-row;
+}
+
+.suksessMelding {
+  border: 1px solid #090;
+  margin: 10px 0;
+  padding: 6px;
+  background: #cfc;
+  color: #000;
+  font-weight: bold;
+}
+
+.feilMelding {
+  border: 1px solid #A52A2A;
+  margin: 10px 0;
+  padding: 6px;
+  background: #ffd2d2;
+  color: #000;
+  font-weight: bold;
+}
+
+.clearfix:after {
+  clear: both;
+  height: 0;
+  display: block;
+  visibility: hidden;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+}
+
+.clearfix {display: inline-block;}
+
+/* Skjul for IE \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* Slutt skjul for IE */
+
+.flytVenstre {
+  float: left;
+}
+
+.flytHoyre {
+  float: right;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.skjul {
+  display: none;
+}
+
+.fet {
+  font-weight: bold;
+}
+
+.kursiv {
+  font-style: italic;
+}
+
+th.ignorer,
+td.ignorer {
+  text-decoration: line-through;
+  color: #666666;
+  background: url(../bilder/skravert.png) white; 
+}
+
+.EKSPERT,
+.PANEL,
+.RADGIVER {
+  font-weight: bold;
+}
+
+.EKSPERT {  }
+.KLADD { background-color: #E9E4D6; }
+.PANEL {  }
+.PANELDELTAKER { background-color: #E9E4D6; }
+.RADGIVER{  }
+
+.ekstraMargin {
+  margin: 10px 0 15px;
+}
+
+.ekstraStorMargin {
+  margin: 25px 0 15px;
+}
+
+.ekstraMarginBunn {
+  margin: 5px 0 15px;
+}
+
+.ekstraMarginTop {
+    margin-top: 5px;
+}
+
+.ekstraMarginKunBunn {
+  margin-bottom: 15px;
+}
+
+.valgtKriterie {
+  font-weight: bold;
+  color: white;
+  background-color: #0599A9;
+}
+
+.ekstraPadding {
+  padding-top: 10px;
+}
+
+.ekstraPaddingBunn {
+  padding-bottom: 15px;
+}
+
+.skjul {
+  visibility: collapse;	
+}
+
+table.standardtabell tbody td.sistBesokt a {
+  color: white;
+}
+
+table.standardtabell tbody tr.odd td.sistBesokt,
+table.standardtabell tbody tr.even td.sistBesokt {
+  background-color: #0599A9;
+}
+
+/**********/
+/* farger */
+/**********/
+
+.skrivebeskyttet 
+{
+  border: none;
+  background-color: #E9E4D6;
+}
+textarea.skrivebeskyttet 
+{
+  padding: 10px 0px 10px 10px;
+}
+
+
+.ferdig {
+   background: url(../bilder/check.png) center right no-repeat;
+}
+
+.understrek {
+  border-bottom: 1px solid #B9AB7A;
+}
+
+.overstrek {
+  border-top: 1px solid #B9AB7A;
+}
+
+.disabled {
+  color: gray;
+}
