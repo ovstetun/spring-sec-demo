@@ -4,3 +4,4 @@ target
 .settings
 .mymetadata
 .springBeans
+src/main/webapp/WEB-INF/classes/
