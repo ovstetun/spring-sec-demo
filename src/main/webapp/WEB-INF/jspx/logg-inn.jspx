@@ -37,11 +37,6 @@
       </div>
     </div>
 
-    <script type="text/javascript">
-      leggTilOnLoadFunksjon(function() {
-        giFokusTilFelt('brukernavnTekst');
-      });
-    </script>
   </l:standard>
 
 </jsp:root>

@@ -16,6 +16,8 @@
         <h3>Dette er en sikret side</h3>
         <p>
           <p>
+          <sec:authorize ifAnyGranted="ROLE_ADMIN">admin</sec:authorize>
+          <s:med-rolle rolle="ROLE_ADMIN">admin2</s:med-rolle>
             <s:bruker />
           </p>
           <sec:authentication property="principal"/>

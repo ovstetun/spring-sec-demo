@@ -1,0 +1,19 @@
+<jsp:root
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:jsp="http://java.sun.com/JSP/Page"
+        xmlns:c="http://java.sun.com/jsp/jstl/core"
+        xmlns:sec="http://www.springframework.org/security/tags"
+        version="2.0">
+
+  <jsp:directive.tag pageEncoding="utf-8"
+                     description="Skriver ut innholdet i body hvis brukeren har angitt rolle."/>
+
+  <jsp:directive.attribute name="rolle"
+                           required="true"
+                           description="Rolle brukeren må ha for å få skrevet ut body."/>
+
+  <sec:authorize ifAnyGranted="${rolle}" >
+    <jsp:doBody/>
+  </sec:authorize>
+
+</jsp:root>
