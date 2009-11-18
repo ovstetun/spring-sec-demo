@@ -9,16 +9,11 @@
   <http auto-config="true" >
     <intercept-url pattern="/side/loggInn" access="IS_AUTHENTICATED_ANONYMOUSLY" />
     <intercept-url pattern="/side/loggut" access="IS_AUTHENTICATED_ANONYMOUSLY" />
-    <intercept-url pattern="/side/" access="IS_AUTHENTICATED_ANONYMOUSLY" />
-    <intercept-url pattern="/side/aapen/" access="IS_AUTHENTICATED_ANONYMOUSLY" />
-    <intercept-url pattern="/side/innlogget" access="IS_AUTHENTICATED_FULLY" />
-    <intercept-url pattern="/side/sikker/**" access="ROLE_ADMIN,ROLE_WORKER" />
-    <intercept-url pattern="/side/**" access="ROLE_USER" />
+    <intercept-url pattern="/side/sikker/**" access="IS_AUTHENTICATED_FULLY" />
+    
     <form-login login-page="/side/loggInn" authentication-failure-url="/side/bruker/loggInn?ugyldig" />
-    <remember-me />
     <logout logout-success-url="/"/>
   </http>
-  
   
   <authentication-manager alias="lala">
 	<authentication-provider>

@@ -12,7 +12,4 @@
 
   <context:annotation-config />
   <context:component-scan base-package="no.mesan" />
-  
-  <sec:global-method-security secured-annotations="enabled" />
-  
 </beans>

@@ -11,8 +11,7 @@
 
   <div>
     <div id="headerLogo">
-      <c:url value="/" var="headerURL"/>
-      <a href="${headerURL}"><img src="${bilderoot}/logo.gif" alt="Logo"/></a>
+      <img src="${bilderoot}/logo.gif" alt="Logo"/>
     </div>
 
     <s:innlogget>
@@ -26,25 +25,14 @@
           </form>
       </div>
     </s:innlogget>
-
   </div>
 
   <div id="headerMeny">
-    <c:url value="${sideroot}/aapen/" var="apenURL"/>
-    <a id="aapenMeny" href="${apenURL}">&#197;pen</a>
-    <c:url value="${sideroot}/innlogget/" var="innloggetURL"/>
-    <a id="aapenMeny" href="${innloggetURL}">Innlogget</a>
-
-    <c:url value="${sideroot}/sikker/" var="sikkerURL"/>
-    <a id="sikkerMeny" href="${sikkerURL}">Sikker</a>
-
-    <c:url value="${sideroot}/ekstra/arbeider" var="ekstraURL"/>
-    <a id="ekstraMeny" href="${ekstraURL}">Sikret ARBEIDER</a>
-    <c:url value="${sideroot}/ekstra/admin" var="ekstraURL"/>
-    <a id="sentralAdminMeny" href="${ekstraURL}">Sikret ADMIN</a>
+    <c:url value="${sideroot}/" var="rotURL"/>
+    <a id="rotMeny" href="${rotURL}">&#197;pen</a>
     
     <c:url value="${sideroot}/loggut" var="loggutURL"/>
-    <a id="sentralAdminMeny" href="${loggutURL}">URL-loggut</a>
+    <a id="loggUtMeny" href="${loggutURL}">Logg ut</a>
 
   </div>
 </jsp:root>
